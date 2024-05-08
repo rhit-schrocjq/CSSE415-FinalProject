@@ -26,7 +26,7 @@ def get_X_y():
     X_n = StandardScaler().set_output(transform='pandas').fit_transform(X_n)
 
     # Hot Encode
-    X_c = pd.get_dummies(X_c, drop_first = True) #dropped first
+    X_c = pd.get_dummies(X_c, drop_first = False) #dropped first
     df = pd.concat([X_n,X_c,y0],axis=1)
 
     # Redefine features and target
